@@ -24,5 +24,5 @@ export function getCloudinaryUrl(fileName) {
   }
 
   // f_auto,q_auto 自動選最新檔案，避免 404
-  return `https://res.cloudinary.com/${cloudName}/${resourceType}/upload/f_auto,q_auto/${publicId}.${format}`;
+  return `https://res.cloudinary.com/${cloudName}/${resourceType}/upload/f_auto,q_auto/${publicId}.${format}?v=${Date.now()}`;
 }
