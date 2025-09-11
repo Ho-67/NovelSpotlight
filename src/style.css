@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Noto Sans TC", "Inter", sans-serif;
+}
+
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2a454b;
+}
+
+body {
+  background-color: #f4f3ec;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #7ea5aa;
+}
+
+a:hover {
+  color: #096982;
+  transition: 0.2s;
+}
+
+hr {
+  border: 0;
+  height: 1.5px;
+  background: linear-gradient(to right, #7ea5aa, #096982, #2a454b);
+}
+
+/************************ 時間軸 **************************/
+/* 共用樣式 */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+  will-change: transform, opacity;
+}
+
+/* 入場和離場動畫 */
+.timeline-item.slide-left {
+  transform: translateX(-3rem);
+  opacity: 0;
+}
+
+.timeline-item.slide-right {
+  transform: translateX(3rem);
+  opacity: 0;
+}
+
+.timeline-item.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 文字卡片樣式 */
+.text-card {
+  background-color: #f1efe2;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #61777b;
+  text-align: center;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.desc {
+  padding: 0 0.5rem;
+  line-height: 1.6;
+}
+
+/* 手機版 */
+@media (max-width: 1024px) {
+  .title {
+    color: #61777b;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* 時間軸線 */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 3px;
+    background-color: #7ea5aa;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+    margin-bottom: 2rem;
+  }
+
+  /* 圓點靠左 */
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f4f3ec;
+    border: 3px solid #7ea5aa;
+    border-radius: 50%;
+    top: 2.75rem; /* Adjust this value to vertically center with the title */
+    left: 11px;
+    z-index: 1;
+  }
+
+  /* 垂直堆疊 */
+  .media-card {
+    margin-bottom: 1rem;
+  }
+
+  .text-card {
+    width: 100%;
+  }
+}
+
+/********************************************************/
