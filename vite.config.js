@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/NOVELSPOTLIGHT/",
+  base: "/NovelSpotlight/",
   plugins: [vue(), Pages(), tailwindcss()],
   resolve: {
     alias: {
