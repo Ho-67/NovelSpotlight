@@ -49,4 +49,4 @@
 ## 🚀 展示
 
 [文輕小站 Figma Prototype](https://www.figma.com/proto/X3sJVpnhkt3dGKRUcNlvwJ/app%E6%A6%82%E5%BF%B5%E4%BA%92%E5%8B%95%E9%AB%94%E9%A9%97%E7%89%88_%E6%96%87%E8%BC%95%E5%B0%8F%E7%AB%99?page-id=0%3A1&node-id=548-29430&viewport=-46%2C18427%2C0.63&scaling=scale-down&starting-point-node-id=1%3A7447)
-[文輕小站 RWD 展示網頁](https://github.com/Ho-67/NovelSpotlight/)
+[文輕小站 RWD 展示網頁](https://github.com/Ho-67/NovelSpotlight/#/)
